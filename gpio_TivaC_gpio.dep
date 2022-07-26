@@ -1,0 +1,18 @@
+Dependencies for Project 'gpio', Target 'TivaC_gpio': (DO NOT MODIFY !)
+F (.\startup_TM4C123.s)(0x532CD432)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
+F (.\main.c)(0x62DF7287)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --signed_chars -I..\MyProjects_ws-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C8A654)
+I (tm4c123gh6pm.h)(0x5388DEFA)
+I (Port.h)(0x62DB805C)
+I (Port_Types.h)(0x62DDFF7E)
+I (Dio.h)(0x62DDF240)
+F (.\Dio.c)(0x62DDD88E)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --signed_chars -I..\MyProjects_ws-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\dio.o --omf_browse .\dio.crf --depend .\dio.d)
+I (..\MyProjects_ws\Dio.h)(0x62DDF240)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C8A654)
+I (Port_Types.h)(0x62DDFF7E)
+I (Std_Macros.h)(0x62DCC5E5)
+F (.\Port.c)(0x62DDF31B)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --signed_chars -I..\MyProjects_ws-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\port.o --omf_browse .\port.crf --depend .\port.d)
+I (Port.h)(0x62DB805C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C8A654)
+I (Port_Types.h)(0x62DDFF7E)
+I (Dio.h)(0x62DDF240)

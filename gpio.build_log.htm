@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\MyProjects_ws\gpio.uvproj
+Project File Date:  07/24/2022
+
+<h2>Output:</h2>
+Rebuild target 'TivaC_gpio'
+assembling startup_TM4C123.s...
+compiling main.c...
+Port_Types.h(76): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif  _PORT_TYPES_H
+Port.h(12): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif  _PORT_H
+Dio.h(117): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif   _DIO_H
+main.c(24): warning:  #188-D: enumerated type mixed with another type
+      Conf_Ptr->PinNumber = 7;
+main.c(30): warning:  #188-D: enumerated type mixed with another type
+            Dio_WriteChannel((uint8_t)Conf_Ptr->PortID, 7, 1);
+main.c(30): warning:  #188-D: enumerated type mixed with another type
+            Dio_WriteChannel((uint8_t)Conf_Ptr->PortID, 7, 1);
+main.c(30): warning:  #188-D: enumerated type mixed with another type
+            Dio_WriteChannel((uint8_t)Conf_Ptr->PortID, 7, 1);
+main.c(36): warning:  #111-D: statement is unreachable
+        return 0;
+main.c: 8 warnings, 0 errors
+compiling Dio.c...
+..\MyProjects_ws\Dio.h(117): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif   _DIO_H
+Port_Types.h(76): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif  _PORT_TYPES_H
+Std_Macros.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+Dio.c(48): warning:  #188-D: enumerated type mixed with another type
+      return val;
+Dio.c: 4 warnings, 0 errors
+compiling Port.c...
+Port_Types.h(76): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif  _PORT_TYPES_H
+Port.h(12): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif  _PORT_H
+Dio.h(117): warning:  #14-D: extra text after expected end of preprocessing directive
+  #endif   _DIO_H
+Port.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=1124 RO-data=636 RW-data=0 ZI-data=608  
+".\LedControl.axf" - 0 Error(s), 15 Warning(s).
+</pre>
+</body>
+</html>
+57: variable "Port_ConfigType" is not a type name
+  void Port_Init(Port_ConfigType *ConfigPtr)
+Port.c(7): error:  #132: expression must have pointer-to-struct-or-union type
+      uint8_t Port_ID = ConfigPtr->PortID;
+Port.c(38): error:  #132: expression must have pointer-to-struct-or-union type
+                 if(ConfigPtr->ModeValue == DIO)
+Port.c(43): error:  #132: expression must have pointer-to-struct-or-union type
+                         GPIODEN_PORTF_APB |=(1<<ConfigPtr->PinNumber);   // 0111 1111          // enable digital enable feature
+Port.c(44): error:  #132: expression must have pointer-to-struct-or-union type
+         GPIOCR_PORTF_APB |=(1<<ConfigPtr->PinNumber);
+Port.c(45): error:  #132: expression must have pointer-to-struct-or-union type
+         if( (ConfigPtr->Direction)  == 1)
+Port.c(47): error:  #132: expression must have pointer-to-struct-or-union type
+         GPIOF_DIR_R_APB |=( 1<<(ConfigPtr->PinNumber));
+Port.c(49): error:  #132: expression must have pointer-to-struct-or-union type
+         else if( (ConfigPtr->Direction)  == 0)
+Port.c(52): error:  #132: expression must have pointer-to-struct-or-union type
+             GPIOF_DIR_R_APB &=~( 1<<(ConfigPtr->PinNumber));
+Port.c(53): error:  #132: expression must have pointer-to-struct-or-union type
+             if(ConfigPtr->IntAttach == Floating) {}
+Port.c(54): error:  #132: expression must have pointer-to-struct-or-union type
+             else if(ConfigPtr->IntAttach == PullUp) {}
+Port.c(55): error:  #132: expression must have pointer-to-struct-or-union type
+             else if (ConfigPtr->IntAttach == PullDown) {}
+Port.c(56): error:  #132: expression must have pointer-to-struct-or-union type
+             else if (ConfigPtr->IntAttach == OpenDrain) {}
+Port.c: 3 warnings, 14 errors
+".\LedControl.axf" - 17 Error(s), 13 Warning(s).
+Target not created
